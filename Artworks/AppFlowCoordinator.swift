@@ -18,6 +18,7 @@ final class AppFlowCoordinator{
     }
     
     func start() {
-        
+        let flow = appDIContainer.makeArtworksSceneFlowCoordinator(navigationController: navigationController)
+        flow.start()
     }
 }
