@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+import SDWebImage
 protocol ArtworkListTableCellDelegate: AnyObject{
     func cell(urlString: String, updatesFavoriteState isFavorite: Bool)
 }
@@ -17,7 +17,7 @@ class ArtworkListTableCell: UITableViewCell {
     @IBOutlet weak var source: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var desc: UILabel!
-    @IBOutlet weak var headlineImageView: UIImageView!
+    @IBOutlet weak var artworkImageView: UIImageView!
     @IBOutlet weak var favoriteImageView: UIImageView!
     @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     
@@ -39,6 +39,7 @@ class ArtworkListTableCell: UITableViewCell {
             source.text = viewModel.source
             date.text = viewModel.date
             desc.text = viewModel.desc
+            artworkImageView.sd_setImage(with: viewModel.imageUrl, completed: nil)
         }
     }
     

@@ -10,7 +10,7 @@ import Foundation
 
 // MARK:- View
 protocol ArtworksListViewProtocol: AnyObject {
-    
+    func didFinishLoading(with error: Error?)
 }
 
 // MARK:- ViewPresenter
@@ -23,13 +23,26 @@ protocol ArtworksListPresenterProtocol: AnyObject {
 }
 
 class ArtworksListPresenter: ArtworksListPresenterProtocol {
-
+    
     // MARK: Properties
     weak var view: ArtworksListViewProtocol?
-    var artworks: [Artwork] = [ .init(title: "Dumo", source: "d source", desc: "d desc", date: "d date", imageUrl: URL(string: ""))
-    ]
-
+    var artworks = [Artwork]()
+    var repo: ArtworksRepo? // TODO: Fix it, to have use case instead of repo directly
+    
     func viewDidLoad() {
+        repo?.getArtworks(page: 1, completion: { [weak self] result in
+            
+            guard let `self` = self else { return }
+            
+            switch result{
+            case .success(let artworks):
+                self.artworks = artworks
+                self.view?.didFinishLoading(with: nil)
+            case .failure(let error):
+                errorLog("error: \(error.localizedDescription)")
+                self.view?.didFinishLoading(with: error)
+            }
+        })
     }
 
     // MARK: Methods

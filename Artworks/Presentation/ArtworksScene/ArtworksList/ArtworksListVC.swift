@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ArtworksListVC: UIViewController, ArtworksListViewProtocol {
+class ArtworksListVC: UIViewController {
     // MARK: Outlets
     @IBOutlet weak var artworksTableView: UITableView!
     
@@ -59,5 +59,11 @@ extension ArtworksListVC: UITableViewDelegate, UITableViewDataSource{
         cell.viewModel = presenter.viewModel(forCellAtIndex: indexPath.row)
         
         return cell
+    }
+}
+
+extension ArtworksListVC: ArtworksListViewProtocol{
+    func didFinishLoading(with error: Error?) { // TODO: Add error handling
+        artworksTableView.reloadData()
     }
 }

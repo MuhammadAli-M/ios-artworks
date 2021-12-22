@@ -22,11 +22,12 @@ struct ArtworksItemViewModel: ArtworksItemViewProtocol{
     let date: String
     var imageUrl: URL?
     
+    
     init(_ artwork: Artwork){
         self.title = artwork.title
-        self.source = artwork.source
+        self.source = artwork.placeOfOrigin
         self.desc = artwork.desc
-        self.date = artwork.date
+        self.date = artwork.dateDisplay
         self.imageUrl = artwork.imageUrl
     }
 }

@@ -9,10 +9,23 @@ import UIKit
 
 final class AppDIContainer{
     
+    lazy var appConfiguration = AppConfiguration(apiBaseURL: "https://api.artic.edu/api/v1/",
+                                                 imagesBaseURL: "https://www.artic.edu/iiif/2/")
+
+    // MARK: - Network
+    lazy var apiDataTransferService: DataTransferService = {
+        let config = ApiDataNetworkConfig(baseURL: URL(string: appConfiguration.apiBaseURL)!,
+                                          queryParameters: ["language": NSLocale.preferredLanguages.first ?? "en"])
+        
+        let apiDataNetwork = DefaultNetworkService(config: config)
+        return DefaultDataTransferService(with: apiDataNetwork)
+    }()
+
     init(){}
     
     func makeArtworksSceneDIContainer() -> ArtworksSceneDIContainerProtocol{
-        return ArtworksSceneDIContainer()
+        return ArtworksSceneDIContainer(dependecies: .init(apiDataTransferService: apiDataTransferService,
+                                                           imageDataTransferServiceBaseURL: URL( string: appConfiguration.imagesBaseURL)))
     }
     
     func makeArtworksSceneFlowCoordinator(navigationController: UINavigationController) -> ArtworksSceneFlowCoordinator{

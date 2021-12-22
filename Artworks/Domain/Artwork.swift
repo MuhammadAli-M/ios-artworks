@@ -8,9 +8,11 @@
 import Foundation
 
 struct Artwork{
+    let id: Int
     let title: String
-    let source: String
+    let placeOfOrigin: String
     let desc: String
-    let date: String
-    let imageUrl: URL?
+    let dateDisplay: String
+    let imageId: String
+    var imageUrl: URL? = nil
 }
