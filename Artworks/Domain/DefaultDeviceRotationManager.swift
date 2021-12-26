@@ -13,7 +13,7 @@ class DefaultDeviceRotationManager{
 }
 
 extension DefaultDeviceRotationManager: DeviceRotationManagerProtocol{
-    func stopDeviceMotionUpdates() {
+    func stopUpdates() {
         motionManager.stopDeviceMotionUpdates()
     }
     
@@ -26,7 +26,7 @@ extension DefaultDeviceRotationManager: DeviceRotationManagerProtocol{
         }
     }
 
-    func startDeviceMotionUpdates(to queue: OperationQueue, withHandler handler: @escaping DeviceRotationHandler){
+    func startUpdates(to queue: OperationQueue, withHandler handler: @escaping DeviceRotationHandler){
         if motionManager.isDeviceMotionAvailable {
             motionManager.startDeviceMotionUpdates(to: queue) { data, error in
                 
@@ -38,8 +38,6 @@ extension DefaultDeviceRotationManager: DeviceRotationManagerProtocol{
                 
                 print("grav x: \(data.gravity.x), y: \(data.gravity.y), z: \(data.gravity.z)")
                 var rotationAroundZ = atan2(data.gravity.x, data.gravity.y) + .pi
-                let rotationAroundX = atan2(data.gravity.y, data.gravity.z) + .pi
-                let rotationAroundY = atan2(data.gravity.z, data.gravity.x) + .pi
 
                 print("rotationz: \(rotationAroundZ.fromRadToDeg()) •")
                 
@@ -49,7 +47,7 @@ extension DefaultDeviceRotationManager: DeviceRotationManagerProtocol{
 //                    rotationAroundZ = 0
 //                }
                 
-                print("rotationx: \(rotationAroundX.fromRadToDeg()), rotationy: \(rotationAroundY.fromRadToDeg())")
+//                print("rotationx: \(rotationAroundX.fromRadToDeg()), rotationy: \(rotationAroundY.fromRadToDeg())")
                 handler(.success(rotationAroundZ.fromRadToDeg()))
                 
                 

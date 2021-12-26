@@ -10,8 +10,8 @@ import Foundation
 protocol DeviceRotationManagerProtocol{
     typealias DeviceRotationHandler = (Result<Double, Error>) -> Void
     var updateInterval: TimeInterval { get set}
-    func startDeviceMotionUpdates(to queue: OperationQueue, withHandler handler: @escaping DeviceRotationHandler)
-    func stopDeviceMotionUpdates()
+    func startUpdates(to queue: OperationQueue, withHandler handler: @escaping DeviceRotationHandler)
+    func stopUpdates()
 }
 
 enum DeviceRotationManagerError: Error{

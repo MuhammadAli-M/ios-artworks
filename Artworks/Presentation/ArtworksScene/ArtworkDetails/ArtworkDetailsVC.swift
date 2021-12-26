@@ -37,29 +37,6 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
     @IBOutlet weak var artworkTitle: UILabel!
     @IBOutlet weak var artistName: UILabel!
     
-    // MARK: Properties
-    var presenter: ArtworkDetailsPresenterProtocol!
-    let theme: ThemeProtocol = DefaultTheme()
-    
-    class func create(with presenter: ArtworkDetailsPresenterProtocol) -> ArtworkDetailsVC {
-        let vc = ArtworkDetailsVC.instantiateViewController()
-        vc.presenter = presenter
-        return vc
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-//        navigationController?.navigationBar.prefersLargeTitles = false
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        updateUI(viewModel: presenter.getViewModel())
-    }
-    
-    // MARK: Actions
-    
     lazy var seeMoreBtn: UIButton = {
         let btn = UIButton(type: .system)
         btn.setTitle("See more", for: .normal)
@@ -72,6 +49,39 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
         return activityIndicator1
     }()
     
+    // MARK: Properties
+    var presenter: ArtworkDetailsPresenterProtocol!
+    let theme: ThemeProtocol = DefaultTheme()
+    
+    // MARK: LifeCycle
+    class func create(with presenter: ArtworkDetailsPresenterProtocol) -> ArtworkDetailsVC {
+        let vc = ArtworkDetailsVC.instantiateViewController()
+        vc.presenter = presenter
+        return vc
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        navigationController?.navigationBar.topItem?.largeTitleDisplayMode = .never
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        updateUI(viewModel: presenter.getViewModel())
+    }
+    
+    // MARK: Actions
+    @objc func seeMoreBtnTapped(){
+        debugLog("")
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+        artistInfoStackView.addArrangedSubview(activityIndicator)
+        seeMoreBtn.isHidden = true
+        activityIndicator.startAnimating()
+        
+        presenter.fetchArtistInfo()
+    }
+
+    // MARK: Methods
     func addSeeMoreBtnUI(){ // Added it from code as a workaround as the sizing from code was not working properly.
         seeMoreBtn.translatesAutoresizingMaskIntoConstraints = false
         artistInfoStackView.addArrangedSubview(seeMoreBtn)
@@ -91,16 +101,6 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
         
         artistName.text = "By: " + artistTitle
         themeUpdated(theme: theme)
-    }
-    
-    @objc func seeMoreBtnTapped(){
-        debugLog("")
-        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
-        artistInfoStackView.addArrangedSubview(activityIndicator)
-        seeMoreBtn.isHidden = true
-        activityIndicator.startAnimating()
-        
-        presenter.fetchArtistInfo()
     }
     
 }
@@ -132,7 +132,6 @@ Death: \(info.deathDate)
             errorLog("\(error.localizedDescription)")
             // TODO: Handle Error
         }
-        
     }
 }
 

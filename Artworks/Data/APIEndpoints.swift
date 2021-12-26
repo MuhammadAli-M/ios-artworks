@@ -12,7 +12,7 @@ struct APIEndpoints {
     static func getArtworks(with requestDTO: ArtworksRequest) -> Endpoint<ArtworksListResponse> {
         return Endpoint(path: "artworks",
                         method: .get,
-                        headerParamaters: ["Content-Type": "application/json"], // Optional
+                        headerParamaters: ["Content-Type": "application/json"],
                         queryParametersEncodable: requestDTO)
     }
     

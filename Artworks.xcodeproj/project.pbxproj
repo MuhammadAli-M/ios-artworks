@@ -61,6 +61,8 @@
 		54EC39AC2777640900B30672 /* DeviceRotationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AA2777640900B30672 /* DeviceRotationManagerProtocol.swift */; };
 		54EC39AE2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */; };
 		54EC39AF2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */; };
+		54EC39B12778240E00B30672 /* Double+Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39B02778240E00B30672 /* Double+Angle.swift */; };
+		54EC39B22778240E00B30672 /* Double+Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39B02778240E00B30672 /* Double+Angle.swift */; };
 		64E567644E4447FB8866378C /* Pods_Artworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19A29DCE450D05BBE4F919A /* Pods_Artworks.framework */; };
 		FF93C91B2E5D280BDADDDE9F /* Pods_ArtworksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB50B92DDF0B02730AE58077 /* Pods_ArtworksTests.framework */; };
 /* End PBXBuildFile section */
@@ -123,6 +125,7 @@
 		54EC39A727773B9B00B30672 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 		54EC39AA2777640900B30672 /* DeviceRotationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationManagerProtocol.swift; sourceTree = "<group>"; };
 		54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDeviceRotationManager.swift; sourceTree = "<group>"; };
+		54EC39B02778240E00B30672 /* Double+Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Angle.swift"; sourceTree = "<group>"; };
 		A1384FD64DCBDC7FEF838126 /* Pods-ArtworksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworksTests.debug.xcconfig"; path = "Target Support Files/Pods-ArtworksTests/Pods-ArtworksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A19A29DCE450D05BBE4F919A /* Pods_Artworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B313D58FC544D4C053B42C /* Pods-Artworks-ArtworksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artworks-ArtworksUITests.debug.xcconfig"; path = "Target Support Files/Pods-Artworks-ArtworksUITests/Pods-Artworks-ArtworksUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +241,7 @@
 		54B371482772F74400592E93 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				54EC39B02778240E00B30672 /* Double+Angle.swift */,
 				54B371492772F77800592E93 /* StoryboardInstantiable.swift */,
 				54B3716F277319D400592E93 /* Logger.swift */,
 			);
@@ -534,6 +538,7 @@
 				54B3714727720DD500592E93 /* ArtworkListTableCell.swift in Sources */,
 				54B371442771D2DF00592E93 /* ArtworksListRouterProtocol.swift in Sources */,
 				54B3714A2772F77800592E93 /* StoryboardInstantiable.swift in Sources */,
+				54EC39B12778240E00B30672 /* Double+Angle.swift in Sources */,
 				54B3717E2773556900592E93 /* ArtworkDetailsPresenter.swift in Sources */,
 				54EC39A827773B9B00B30672 /* ArtistViewModel.swift in Sources */,
 				54EC39AE2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */,
@@ -565,6 +570,7 @@
 				54EC39A927773B9B00B30672 /* ArtistViewModel.swift in Sources */,
 				54B37174277326DA00592E93 /* Endpoint.swift in Sources */,
 				54B37175277326EE00592E93 /* NetworkConfigurableMock.swift in Sources */,
+				54EC39B22778240E00B30672 /* Double+Angle.swift in Sources */,
 				54EC39A62777288400B30672 /* ArtistInfoAPITests.swift in Sources */,
 				54B37171277326DA00592E93 /* NetworkConfig.swift in Sources */,
 				54EC399C27771E7300B30672 /* ArtistInfoAPI.swift in Sources */,

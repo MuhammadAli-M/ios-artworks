@@ -30,7 +30,7 @@ class ArtworkDetailsPresenter: ArtworkDetailsPresenterProtocol {
     var deviceRotationManager: DeviceRotationManagerProtocol?{
         didSet{
             deviceRotationManager?.updateInterval = 0.1
-            deviceRotationManager?.startDeviceMotionUpdates(to: .main, withHandler: { [weak self] result in
+            deviceRotationManager?.startUpdates(to: .main, withHandler: { [weak self] result in
                 if case let .success(angle) = result {
                     let targetAngle = 30.0 // degrees
                     let sightRange = 150.0
@@ -56,7 +56,7 @@ class ArtworkDetailsPresenter: ArtworkDetailsPresenterProtocol {
     // MARK: Life Cycle
     
     deinit{
-        deviceRotationManager?.stopDeviceMotionUpdates()
+        deviceRotationManager?.stopUpdates()
     }
     
     // MARK: Methods
@@ -88,13 +88,3 @@ enum ArtistInfoError: Error{
     case noAttacedIdentifier
 }
 
-
-
-// TODO: Add new file
-extension Double{
-    static var piInDegrees: Double = 180
-    
-    func fromRadToDeg() -> Double {
-        return self * .piInDegrees / .pi
-    }
-}

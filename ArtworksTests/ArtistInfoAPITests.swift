@@ -39,7 +39,7 @@ class ArtistInfoAPITests: XCTestCase {
                 
                 debugLog("recieved \(artist)")
             }catch{
-                errorLog("while json parsing, error : \(error.localizedDescription)")
+                XCTFail("while json parsing, error : \(error.localizedDescription)")
             }
         }
         task.resume()

@@ -32,5 +32,7 @@ extension ArtworksSceneFlowCoordinator: ArtworksListRouterProtocol{
 }
 
 extension ArtworksSceneFlowCoordinator: ArtworkDetailsRouterProtocol{
-    
+    func showArtworksList(){
+        navigationController?.popViewController(animated: true)
+    }
 }
