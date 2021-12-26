@@ -9,6 +9,6 @@ import Foundation
 
 struct Artist{
     let id: Int
-    let birthDate: Int
-    let deathDate: Int
+    let birthDate: Int?
+    let deathDate: Int?
 }

@@ -36,9 +36,9 @@ struct ArtistInfo: Codable {
 //    let apiLink: String
 //    let title, sortTitle: String
 //    let altTitles: [String]
-    let birthDate: Int
+    let birthDate: Int?
 //    let birthPlace: String?
-    let deathDate: Int
+    let deathDate: Int?
 //    let deathPlace: String?
 //    let dataDescription: String
 //    let isLicensingRestricted: Bool?
