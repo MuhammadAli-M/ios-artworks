@@ -60,6 +60,14 @@ extension ArtworksListVC: UITableViewDelegate, UITableViewDataSource{
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter.artworkTapped(withIndex: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        presenter.willDisplayItem(ForIndex: indexPath.row)
+    }
 }
 
 extension ArtworksListVC: ArtworksListViewProtocol{
