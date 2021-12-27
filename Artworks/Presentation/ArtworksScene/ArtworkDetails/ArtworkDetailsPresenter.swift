@@ -18,6 +18,7 @@ protocol ArtworkDetailsViewProtocol: AnyObject {
 protocol ArtworkDetailsPresenterProtocol: AnyObject {
     var view: ArtworkDetailsViewProtocol? { get set }
     func getViewModel() -> ArtworksItemViewModel
+    func getTheme() -> ThemeProtocol
     func fetchArtistInfo()
 }
 
@@ -65,8 +66,8 @@ class ArtworkDetailsPresenter: ArtworkDetailsPresenterProtocol {
         return ArtworksItemViewModel(artwork)
     }
     
-    func getTitle() -> String{
-        artwork.title
+    func getTheme() -> ThemeProtocol{
+        return DefaultTheme()
     }
     
     func fetchArtistInfo(){

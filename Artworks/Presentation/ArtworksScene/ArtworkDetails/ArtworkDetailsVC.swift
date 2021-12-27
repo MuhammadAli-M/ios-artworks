@@ -31,7 +31,7 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
     
     // MARK: Properties
     private var presenter: ArtworkDetailsPresenterProtocol!
-    private let theme: ThemeProtocol = DefaultTheme()
+//    private var theme: ThemeProtocol = DefaultTheme()
     
     // MARK: LifeCycle
     class func create(with presenter: ArtworkDetailsPresenterProtocol) -> ArtworkDetailsVC {
@@ -72,14 +72,12 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
         
         
         guard let artistTitle = viewModel.artistTitle else {
-            themeUpdated(theme: theme)
             return
         }
         
         addSeeMoreBtnUI()
         
         artistName.text = "By: ".localizedValue + artistTitle
-        themeUpdated(theme: theme)
     }
     
 }
