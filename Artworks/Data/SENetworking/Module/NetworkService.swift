@@ -10,6 +10,7 @@ import Foundation
 public enum NetworkError: Error {
     case error(statusCode: Int, data: Data?)
     case notConnected
+    case timedOut
     case cancelled
     case generic(Error)
     case urlGeneration
@@ -85,6 +86,7 @@ public final class DefaultNetworkService {
         let code = URLError.Code(rawValue: (error as NSError).code)
         switch code {
         case .notConnectedToInternet: return .notConnected
+        case .timedOut: return .timedOut
         case .cancelled: return .cancelled
         default: return .generic(error)
         }

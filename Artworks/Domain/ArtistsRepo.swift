@@ -8,7 +8,14 @@
 import Foundation
 
 protocol ArtistsRepo{
-    func getArtist(id: String, completion: @escaping (Result<Artist, Error>) -> Void)
+    func getArtist(id: Int?, completion: @escaping (Result<Artist, ArtistInfoError>) -> Void)
+}
+
+enum ArtistInfoError: Error{
+    case noAttacedIdentifier
+    case noIntenetConnection
+    case connectionTimeout
+    case dataTransferError(DataTransferError)
 }
 
 final class DefaultArtistsRepo {
@@ -21,8 +28,14 @@ final class DefaultArtistsRepo {
 }
 
 extension DefaultArtistsRepo: ArtistsRepo {
-    func getArtist(id: String, completion: @escaping (Result<Artist, Error>) -> Void) {
-        let requestDTO = ArtistRequest(id: id)
+    func getArtist(id: Int?, completion: @escaping (Result<Artist, ArtistInfoError>) -> Void) {
+        
+        guard let artistId = id else {
+            completion(.failure(.noAttacedIdentifier))
+            return
+        }
+        
+        let requestDTO = ArtistRequest(id: String(artistId))
         
         let endpoint = APIEndpoints.getArtist(with: requestDTO)
         self.dataTransferService.request(with: endpoint) { [weak self] result in
@@ -35,12 +48,24 @@ extension DefaultArtistsRepo: ArtistsRepo {
                 completion(.success(responseDTO.toDomain()))
 
             case .failure(let error):
-                completion(.failure(error))
+                let artistInfoError = self.resolve(dataTransferError: error)
+                completion(.failure(artistInfoError))
             }
         }
-
-        
     }
-    
+
+    private func resolve(dataTransferError: DataTransferError) -> ArtistInfoError{
+        var outputError: ArtistInfoError = .dataTransferError(dataTransferError)
+        
+        if case .networkFailure(let networkError) = dataTransferError{
+           if case .notConnected = networkError {
+            outputError =  .noIntenetConnection
+           } else if case .timedOut = networkError {
+               return .connectionTimeout
+           }
+        }
+        return outputError
+    }
+
 }
 

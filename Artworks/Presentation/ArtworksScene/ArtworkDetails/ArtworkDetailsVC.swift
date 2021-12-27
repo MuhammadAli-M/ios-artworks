@@ -118,21 +118,20 @@ extension ArtworkDetailsVC:ArtworkDetailsViewProtocol{
     
     func artistInfoFetched(with result:Result<ArtistViewModel, Error> ){
         switch result{
-        case .success(let info):
+        case .success(let model):
             
             let info =
 """
-Birth: \(info.birthDate),
-Death: \(info.deathDate)
+Birth: \(model.birthDate),
+Death: \(model.deathDate)
 """
             artistName.text?.append(contentsOf: "\n" + info)
             activityIndicator.stopAnimating()
             
         case .failure(let error):
             errorLog("\(error.localizedDescription)")
-            // TODO: Handle Error
+            activityIndicator.stopAnimating()
+            seeMoreBtn.isHidden = false
         }
     }
 }
-
-

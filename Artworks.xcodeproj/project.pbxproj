@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5413F0E72779A7D500150D5F /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0E62779A7D500150D5F /* UIViewController+Alert.swift */; };
+		5413F0E92779A80C00150D5F /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0E82779A80C00150D5F /* AlertAction.swift */; };
 		54B371022771BCA000592E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371012771BCA000592E93 /* AppDelegate.swift */; };
 		54B371042771BCA000592E93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371032771BCA000592E93 /* SceneDelegate.swift */; };
 		54B3710B2771BCA100592E93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B3710A2771BCA100592E93 /* Assets.xcassets */; };
@@ -79,6 +81,8 @@
 
 /* Begin PBXFileReference section */
 		27852B08FEF7841DFD1E2FA7 /* Pods-ArtworksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworksTests.release.xcconfig"; path = "Target Support Files/Pods-ArtworksTests/Pods-ArtworksTests.release.xcconfig"; sourceTree = "<group>"; };
+		5413F0E62779A7D500150D5F /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		5413F0E82779A80C00150D5F /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		54B370FE2771BCA000592E93 /* Artworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B371012771BCA000592E93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B371032771BCA000592E93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -242,8 +246,10 @@
 			isa = PBXGroup;
 			children = (
 				54EC39B02778240E00B30672 /* Double+Angle.swift */,
-				54B371492772F77800592E93 /* StoryboardInstantiable.swift */,
 				54B3716F277319D400592E93 /* Logger.swift */,
+				5413F0E62779A7D500150D5F /* UIViewController+Alert.swift */,
+				5413F0E82779A80C00150D5F /* AlertAction.swift */,
+				54B371492772F77800592E93 /* StoryboardInstantiable.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -526,6 +532,7 @@
 				54B3716027730E4500592E93 /* DataTransferService.swift in Sources */,
 				54B371352771CB3200592E93 /* AppDIContainer.swift in Sources */,
 				54B371372771CB4200592E93 /* AppFlowCoordinator.swift in Sources */,
+				5413F0E72779A7D500150D5F /* UIViewController+Alert.swift in Sources */,
 				54B3716427730E4500592E93 /* NetworkConfigurableMock.swift in Sources */,
 				54EC399F27771EC400B30672 /* Artist.swift in Sources */,
 				54B37170277319D400592E93 /* Logger.swift in Sources */,
@@ -542,6 +549,7 @@
 				54B3717E2773556900592E93 /* ArtworkDetailsPresenter.swift in Sources */,
 				54EC39A827773B9B00B30672 /* ArtistViewModel.swift in Sources */,
 				54EC39AE2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */,
+				5413F0E92779A80C00150D5F /* AlertAction.swift in Sources */,
 				54B3716C277312E600592E93 /* APIEndpoints.swift in Sources */,
 				54B3716E2773137300592E93 /* ArtworksRepo.swift in Sources */,
 				54B3717F2773556900592E93 /* ArtworkDetailsVC.swift in Sources */,

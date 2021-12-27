@@ -8,7 +8,13 @@
 import Foundation
 
 protocol ArtworksRepo{
-    func getArtworks(page: Int, completion: @escaping (Result<[Artwork], Error>) -> Void)
+    func getArtworks(page: Int, completion: @escaping (Result<[Artwork], ArtworksError>) -> Void)
+}
+
+public enum ArtworksError: Error {
+    case noIntenetConnection
+    case connectionTimeout
+    case dataTransferError(DataTransferError)
 }
 
 final class DefaultArtworksRepo {
@@ -24,7 +30,7 @@ final class DefaultArtworksRepo {
 
 extension DefaultArtworksRepo: ArtworksRepo {
 
-    func getArtworks(page: Int, completion: @escaping (Result<[Artwork], Error>) -> Void){
+    func getArtworks(page: Int, completion: @escaping (Result<[Artwork], ArtworksError>) -> Void){
 
         let requestDTO = ArtworksRequest(page: page)
 
@@ -40,6 +46,7 @@ extension DefaultArtworksRepo: ArtworksRepo {
                     completion(.success(artworks))
 
                 case .failure(let error):
+                    let error = self.resolve(dataTransferError: error)
                     completion(.failure(error))
                 }
             }
@@ -52,5 +59,18 @@ extension DefaultArtworksRepo: ArtworksRepo {
             artwork1.imageUrl = APIEndpoints.getArtworkImageUrl(with: imageDataTransferServiceBaseURL?.absoluteString ?? "", imageId: artwork.imageId)
             return artwork1
         }
+    }
+    
+    private func resolve(dataTransferError: DataTransferError) -> ArtworksError{
+        var outputError: ArtworksError = .dataTransferError(dataTransferError)
+        
+        if case .networkFailure(let networkError) = dataTransferError{
+           if case .notConnected = networkError {
+            outputError =  ArtworksError.noIntenetConnection
+           } else if case .timedOut = networkError {
+               return ArtworksError.connectionTimeout
+           }
+        }
+        return outputError
     }
 }
