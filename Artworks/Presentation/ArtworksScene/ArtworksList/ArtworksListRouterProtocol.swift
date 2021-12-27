@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol ArtworksListRouterProtocol{
-    
+protocol ArtworksListRouterProtocol: AnyObject{
+    func showDetailed(artwork: Artwork)
 }

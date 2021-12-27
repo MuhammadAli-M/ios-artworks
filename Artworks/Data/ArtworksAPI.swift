@@ -36,7 +36,9 @@ class ArtworksListResponse: Codable {
                            placeOfOrigin: artworkResponse.placeOfOrigin ?? "",
                            desc: desc,
                            dateDisplay: artworkResponse.dateDisplay,
-                           imageId: imageURLString)
+                           imageId: imageURLString,
+                           artistId: artworkResponse.artistID,
+                           artistTitle: artworkResponse.artistTitle)
         }
     }
 }
@@ -97,10 +99,10 @@ struct Datum: Codable {
 //    let galleryID: Int?
 //    let artworkTypeTitle: String
 //    let artworkTypeID: Int
-    let departmentTitle: String
+    let departmentTitle: String?
 //    let departmentID: String
-//    let artistID: Int?
-//    let artistTitle: String?
+    let artistID: Int?
+    let artistTitle: String?
 //    let altArtistIDS, artistIDS: [String?]
 //    let artistTitles, categoryIDS, categoryTitles: [String]
 //    let artworkCatalogueIDS: [String?]
@@ -169,8 +171,8 @@ struct Datum: Codable {
 //        case artworkTypeID = "artwork_type_id"
         case departmentTitle = "department_title"
 //        case departmentID = "department_id"
-//        case artistID = "artist_id"
-//        case artistTitle = "artist_title"
+        case artistID = "artist_id"
+        case artistTitle = "artist_title"
 //        case altArtistIDS = "alt_artist_ids"
 //        case artistIDS = "artist_ids"
 //        case artistTitles = "artist_titles"

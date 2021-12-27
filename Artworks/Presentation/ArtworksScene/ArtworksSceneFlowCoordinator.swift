@@ -24,5 +24,13 @@ final class ArtworksSceneFlowCoordinator{
 }
 
 extension ArtworksSceneFlowCoordinator: ArtworksListRouterProtocol{
+    func showDetailed(artwork: Artwork) {
+        let vc = DIContainer.makeArtworkDetailsVC(artwork: artwork,
+                                                  router: self)
+        navigationController?.pushViewController(vc, animated: false)
+    }
+}
+
+extension ArtworksSceneFlowCoordinator: ArtworkDetailsRouterProtocol{
     
 }

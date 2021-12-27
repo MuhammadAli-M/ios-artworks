@@ -15,4 +15,6 @@ struct Artwork{
     let dateDisplay: String
     let imageId: String
     var imageUrl: URL? = nil
+    let artistId: Int?
+    let artistTitle: String?
 }

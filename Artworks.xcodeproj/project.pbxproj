@@ -7,14 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32E1E29DAEEE3EEBD848A1F5 /* Pods_Artworks_ArtworksUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9DC1C958094D6080DD9D182 /* Pods_Artworks_ArtworksUITests.framework */; };
 		54B371022771BCA000592E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371012771BCA000592E93 /* AppDelegate.swift */; };
 		54B371042771BCA000592E93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371032771BCA000592E93 /* SceneDelegate.swift */; };
 		54B3710B2771BCA100592E93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B3710A2771BCA100592E93 /* Assets.xcassets */; };
 		54B3710E2771BCA100592E93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B3710C2771BCA100592E93 /* LaunchScreen.storyboard */; };
 		54B371192771BCA100592E93 /* ArtworksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371182771BCA100592E93 /* ArtworksTests.swift */; };
-		54B371232771BCA200592E93 /* ArtworksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371222771BCA200592E93 /* ArtworksUITests.swift */; };
-		54B371252771BCA200592E93 /* ArtworksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371242771BCA200592E93 /* ArtworksUITestsLaunchTests.swift */; };
 		54B371352771CB3200592E93 /* AppDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371342771CB3200592E93 /* AppDIContainer.swift */; };
 		54B371372771CB4200592E93 /* AppFlowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371362771CB4200592E93 /* AppFlowCoordinator.swift */; };
 		54B3713A2771CBC800592E93 /* ArtworksListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371382771CBC800592E93 /* ArtworksListPresenter.swift */; };
@@ -45,19 +42,31 @@
 		54B37175277326EE00592E93 /* NetworkConfigurableMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3715C27730E4500592E93 /* NetworkConfigurableMock.swift */; };
 		54B371772773515700592E93 /* ArtworksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371762773515700592E93 /* ArtworksAPI.swift */; };
 		54B371792773534B00592E93 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371782773534B00592E93 /* AppConfiguration.swift */; };
+		54B3717E2773556900592E93 /* ArtworkDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3717B2773556800592E93 /* ArtworkDetailsPresenter.swift */; };
+		54B3717F2773556900592E93 /* ArtworkDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3717C2773556800592E93 /* ArtworkDetailsVC.swift */; };
+		54B371802773556900592E93 /* ArtworkDetailsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B3717D2773556800592E93 /* ArtworkDetailsVC.storyboard */; };
+		54B37182277356A700592E93 /* ArtworkDetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B37181277356A600592E93 /* ArtworkDetailsRouterProtocol.swift */; };
+		54B371842776144800592E93 /* ArtistsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371832776144800592E93 /* ArtistsRepo.swift */; };
+		54EC399B2777170D00B30672 /* ArtistInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC399A2777170D00B30672 /* ArtistInfoAPI.swift */; };
+		54EC399C27771E7300B30672 /* ArtistInfoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC399A2777170D00B30672 /* ArtistInfoAPI.swift */; };
+		54EC399D27771E7900B30672 /* ArtworksAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371762773515700592E93 /* ArtworksAPI.swift */; };
+		54EC399F27771EC400B30672 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC399E27771EC400B30672 /* Artist.swift */; };
+		54EC39A027771EC400B30672 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC399E27771EC400B30672 /* Artist.swift */; };
+		54EC39A12777225B00B30672 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B3716F277319D400592E93 /* Logger.swift */; };
+		54EC39A22777228100B30672 /* Artwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371502772F80C00592E93 /* Artwork.swift */; };
+		54EC39A62777288400B30672 /* ArtistInfoAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39A52777288400B30672 /* ArtistInfoAPITests.swift */; };
+		54EC39A827773B9B00B30672 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39A727773B9B00B30672 /* ArtistViewModel.swift */; };
+		54EC39A927773B9B00B30672 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39A727773B9B00B30672 /* ArtistViewModel.swift */; };
+		54EC39AB2777640900B30672 /* DeviceRotationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AA2777640900B30672 /* DeviceRotationManagerProtocol.swift */; };
+		54EC39AC2777640900B30672 /* DeviceRotationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AA2777640900B30672 /* DeviceRotationManagerProtocol.swift */; };
+		54EC39AE2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */; };
+		54EC39AF2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */; };
 		64E567644E4447FB8866378C /* Pods_Artworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19A29DCE450D05BBE4F919A /* Pods_Artworks.framework */; };
 		FF93C91B2E5D280BDADDDE9F /* Pods_ArtworksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB50B92DDF0B02730AE58077 /* Pods_ArtworksTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		54B371152771BCA100592E93 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 54B370F62771BCA000592E93 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 54B370FD2771BCA000592E93;
-			remoteInfo = Artworks;
-		};
-		54B3711F2771BCA200592E93 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 54B370F62771BCA000592E93 /* Project object */;
 			proxyType = 1;
@@ -76,7 +85,6 @@
 		54B3710F2771BCA100592E93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54B371142771BCA100592E93 /* ArtworksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtworksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B371182771BCA100592E93 /* ArtworksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksTests.swift; sourceTree = "<group>"; };
-		54B3711E2771BCA200592E93 /* ArtworksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtworksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B371222771BCA200592E93 /* ArtworksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksUITests.swift; sourceTree = "<group>"; };
 		54B371242771BCA200592E93 /* ArtworksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		54B371342771CB3200592E93 /* AppDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDIContainer.swift; sourceTree = "<group>"; };
@@ -104,6 +112,17 @@
 		54B3716F277319D400592E93 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		54B371762773515700592E93 /* ArtworksAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworksAPI.swift; sourceTree = "<group>"; };
 		54B371782773534B00592E93 /* AppConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
+		54B3717B2773556800592E93 /* ArtworkDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDetailsPresenter.swift; sourceTree = "<group>"; };
+		54B3717C2773556800592E93 /* ArtworkDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDetailsVC.swift; sourceTree = "<group>"; };
+		54B3717D2773556800592E93 /* ArtworkDetailsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ArtworkDetailsVC.storyboard; sourceTree = "<group>"; };
+		54B37181277356A600592E93 /* ArtworkDetailsRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkDetailsRouterProtocol.swift; sourceTree = "<group>"; };
+		54B371832776144800592E93 /* ArtistsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsRepo.swift; sourceTree = "<group>"; };
+		54EC399A2777170D00B30672 /* ArtistInfoAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoAPI.swift; sourceTree = "<group>"; };
+		54EC399E27771EC400B30672 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
+		54EC39A52777288400B30672 /* ArtistInfoAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistInfoAPITests.swift; sourceTree = "<group>"; };
+		54EC39A727773B9B00B30672 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
+		54EC39AA2777640900B30672 /* DeviceRotationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationManagerProtocol.swift; sourceTree = "<group>"; };
+		54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDeviceRotationManager.swift; sourceTree = "<group>"; };
 		A1384FD64DCBDC7FEF838126 /* Pods-ArtworksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworksTests.debug.xcconfig"; path = "Target Support Files/Pods-ArtworksTests/Pods-ArtworksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A19A29DCE450D05BBE4F919A /* Pods_Artworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B313D58FC544D4C053B42C /* Pods-Artworks-ArtworksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artworks-ArtworksUITests.debug.xcconfig"; path = "Target Support Files/Pods-Artworks-ArtworksUITests/Pods-Artworks-ArtworksUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,14 +150,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54B3711B2771BCA200592E93 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				32E1E29DAEEE3EEBD848A1F5 /* Pods_Artworks_ArtworksUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -159,7 +170,6 @@
 			children = (
 				54B370FE2771BCA000592E93 /* Artworks.app */,
 				54B371142771BCA100592E93 /* ArtworksTests.xctest */,
-				54B3711E2771BCA200592E93 /* ArtworksUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				54B371182771BCA100592E93 /* ArtworksTests.swift */,
+				54EC39A52777288400B30672 /* ArtistInfoAPITests.swift */,
 			);
 			path = ArtworksTests;
 			sourceTree = "<group>";
@@ -206,9 +217,9 @@
 				54B371432771D2DF00592E93 /* ArtworksListRouterProtocol.swift */,
 				54B371382771CBC800592E93 /* ArtworksListPresenter.swift */,
 				54B371522772F84900592E93 /* ArtworksItemViewModel.swift */,
+				54B3713C2771CCA500592E93 /* ArtworksListVC.storyboard */,
 				54B371392771CBC800592E93 /* ArtworksListVC.swift */,
 				54B3714627720DD500592E93 /* ArtworkListTableCell.swift */,
-				54B3713C2771CCA500592E93 /* ArtworksListVC.storyboard */,
 			);
 			path = ArtworksList;
 			sourceTree = "<group>";
@@ -219,6 +230,7 @@
 				54B3713E2771CFFB00592E93 /* ArtworksSceneFlowCoordinator.swift */,
 				54B371402771D01300592E93 /* ArtworksSceneDIContainer.swift */,
 				54B371422771D27900592E93 /* ArtworksList */,
+				54B3717A2773553E00592E93 /* ArtworkDetails */,
 			);
 			path = ArtworksScene;
 			sourceTree = "<group>";
@@ -236,7 +248,11 @@
 			isa = PBXGroup;
 			children = (
 				54B3716D2773137300592E93 /* ArtworksRepo.swift */,
+				54B371832776144800592E93 /* ArtistsRepo.swift */,
+				54EC39AA2777640900B30672 /* DeviceRotationManagerProtocol.swift */,
+				54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */,
 				54B371502772F80C00592E93 /* Artwork.swift */,
+				54EC399E27771EC400B30672 /* Artist.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -246,6 +262,7 @@
 			children = (
 				54B3716B277312E600592E93 /* APIEndpoints.swift */,
 				54B371762773515700592E93 /* ArtworksAPI.swift */,
+				54EC399A2777170D00B30672 /* ArtistInfoAPI.swift */,
 				54B3715427730E4400592E93 /* SENetworking */,
 			);
 			path = Data;
@@ -296,6 +313,18 @@
 				54B3715D27730E4500592E93 /* NetworkSessionManagerMock.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		54B3717A2773553E00592E93 /* ArtworkDetails */ = {
+			isa = PBXGroup;
+			children = (
+				54B37181277356A600592E93 /* ArtworkDetailsRouterProtocol.swift */,
+				54B3717B2773556800592E93 /* ArtworkDetailsPresenter.swift */,
+				54B3717D2773556800592E93 /* ArtworkDetailsVC.storyboard */,
+				54B3717C2773556800592E93 /* ArtworkDetailsVC.swift */,
+				54EC39A727773B9B00B30672 /* ArtistViewModel.swift */,
+			);
+			path = ArtworkDetails;
 			sourceTree = "<group>";
 		};
 		96FC11A979454373B24CF9F5 /* Frameworks */ = {
@@ -362,26 +391,6 @@
 			productReference = 54B371142771BCA100592E93 /* ArtworksTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		54B3711D2771BCA200592E93 /* ArtworksUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 54B3712E2771BCA200592E93 /* Build configuration list for PBXNativeTarget "ArtworksUITests" */;
-			buildPhases = (
-				263850DB908FAE5248E64451 /* [CP] Check Pods Manifest.lock */,
-				54B3711A2771BCA200592E93 /* Sources */,
-				54B3711B2771BCA200592E93 /* Frameworks */,
-				54B3711C2771BCA200592E93 /* Resources */,
-				6577CB23E3D04DD4A92BC9E8 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				54B371202771BCA200592E93 /* PBXTargetDependency */,
-			);
-			name = ArtworksUITests;
-			productName = ArtworksUITests;
-			productReference = 54B3711E2771BCA200592E93 /* ArtworksUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -396,10 +405,6 @@
 						CreatedOnToolsVersion = 13.0;
 					};
 					54B371132771BCA100592E93 = {
-						CreatedOnToolsVersion = 13.0;
-						TestTargetID = 54B370FD2771BCA000592E93;
-					};
-					54B3711D2771BCA200592E93 = {
 						CreatedOnToolsVersion = 13.0;
 						TestTargetID = 54B370FD2771BCA000592E93;
 					};
@@ -420,7 +425,6 @@
 			targets = (
 				54B370FD2771BCA000592E93 /* Artworks */,
 				54B371132771BCA100592E93 /* ArtworksTests */,
-				54B3711D2771BCA200592E93 /* ArtworksUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -433,6 +437,7 @@
 				54B3713D2771CCA500592E93 /* ArtworksListVC.storyboard in Resources */,
 				54B3710E2771BCA100592E93 /* LaunchScreen.storyboard in Resources */,
 				54B3710B2771BCA100592E93 /* Assets.xcassets in Resources */,
+				54B371802773556900592E93 /* ArtworkDetailsVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -443,38 +448,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		54B3711C2771BCA200592E93 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		263850DB908FAE5248E64451 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Artworks-ArtworksUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		3C966972E7D0969B37040F4E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -495,23 +471,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6577CB23E3D04DD4A92BC9E8 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Artworks-ArtworksUITests/Pods-Artworks-ArtworksUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Artworks-ArtworksUITests/Pods-Artworks-ArtworksUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Artworks-ArtworksUITests/Pods-Artworks-ArtworksUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		74B16EADEAB7D565966B762A /* [CP] Embed Pods Frameworks */ = {
@@ -564,21 +523,30 @@
 				54B371352771CB3200592E93 /* AppDIContainer.swift in Sources */,
 				54B371372771CB4200592E93 /* AppFlowCoordinator.swift in Sources */,
 				54B3716427730E4500592E93 /* NetworkConfigurableMock.swift in Sources */,
+				54EC399F27771EC400B30672 /* Artist.swift in Sources */,
 				54B37170277319D400592E93 /* Logger.swift in Sources */,
 				54B371022771BCA000592E93 /* AppDelegate.swift in Sources */,
 				54B371042771BCA000592E93 /* SceneDelegate.swift in Sources */,
+				54EC39AB2777640900B30672 /* DeviceRotationManagerProtocol.swift in Sources */,
 				54B3716327730E4500592E93 /* NetworkConfig.swift in Sources */,
+				54B371842776144800592E93 /* ArtistsRepo.swift in Sources */,
 				54B371412771D01300592E93 /* ArtworksSceneDIContainer.swift in Sources */,
 				54B3714727720DD500592E93 /* ArtworkListTableCell.swift in Sources */,
 				54B371442771D2DF00592E93 /* ArtworksListRouterProtocol.swift in Sources */,
 				54B3714A2772F77800592E93 /* StoryboardInstantiable.swift in Sources */,
+				54B3717E2773556900592E93 /* ArtworkDetailsPresenter.swift in Sources */,
+				54EC39A827773B9B00B30672 /* ArtistViewModel.swift in Sources */,
+				54EC39AE2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */,
 				54B3716C277312E600592E93 /* APIEndpoints.swift in Sources */,
 				54B3716E2773137300592E93 /* ArtworksRepo.swift in Sources */,
+				54B3717F2773556900592E93 /* ArtworkDetailsVC.swift in Sources */,
 				54B3713F2771CFFB00592E93 /* ArtworksSceneFlowCoordinator.swift in Sources */,
 				54B371792773534B00592E93 /* AppConfiguration.swift in Sources */,
 				54B3716227730E4500592E93 /* Endpoint.swift in Sources */,
 				54B3716127730E4500592E93 /* NetworkService.swift in Sources */,
+				54B37182277356A700592E93 /* ArtworkDetailsRouterProtocol.swift in Sources */,
 				54B3713A2771CBC800592E93 /* ArtworksListPresenter.swift in Sources */,
+				54EC399B2777170D00B30672 /* ArtistInfoAPI.swift in Sources */,
 				54B371512772F80C00592E93 /* Artwork.swift in Sources */,
 				54B371532772F84900592E93 /* ArtworksItemViewModel.swift in Sources */,
 				54B3713B2771CBC800592E93 /* ArtworksListVC.swift in Sources */,
@@ -591,23 +559,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				54B37172277326DA00592E93 /* DataTransferService.swift in Sources */,
+				54EC39AF2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */,
 				54B3716827730E5600592E93 /* DataTransferServiceTests.swift in Sources */,
+				54EC39A22777228100B30672 /* Artwork.swift in Sources */,
+				54EC39A927773B9B00B30672 /* ArtistViewModel.swift in Sources */,
 				54B37174277326DA00592E93 /* Endpoint.swift in Sources */,
 				54B37175277326EE00592E93 /* NetworkConfigurableMock.swift in Sources */,
+				54EC39A62777288400B30672 /* ArtistInfoAPITests.swift in Sources */,
 				54B37171277326DA00592E93 /* NetworkConfig.swift in Sources */,
+				54EC399C27771E7300B30672 /* ArtistInfoAPI.swift in Sources */,
+				54EC39A027771EC400B30672 /* Artist.swift in Sources */,
 				54B371192771BCA100592E93 /* ArtworksTests.swift in Sources */,
+				54EC39AC2777640900B30672 /* DeviceRotationManagerProtocol.swift in Sources */,
 				54B3716A27730E9C00592E93 /* NetworkServiceTests.swift in Sources */,
+				54EC39A12777225B00B30672 /* Logger.swift in Sources */,
 				54B3716927730E8400592E93 /* NetworkSessionManagerMock.swift in Sources */,
 				54B37173277326DA00592E93 /* NetworkService.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54B3711A2771BCA200592E93 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				54B371252771BCA200592E93 /* ArtworksUITestsLaunchTests.swift in Sources */,
-				54B371232771BCA200592E93 /* ArtworksUITests.swift in Sources */,
+				54EC399D27771E7900B30672 /* ArtworksAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,11 +586,6 @@
 			isa = PBXTargetDependency;
 			target = 54B370FD2771BCA000592E93 /* Artworks */;
 			targetProxy = 54B371152771BCA100592E93 /* PBXContainerItemProxy */;
-		};
-		54B371202771BCA200592E93 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 54B370FD2771BCA000592E93 /* Artworks */;
-			targetProxy = 54B3711F2771BCA200592E93 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -762,19 +725,20 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JSZ9BPQ2F4;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Artworks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MA.com.Artworks;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ma.artworks-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -788,22 +752,24 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JSZ9BPQ2F4;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Artworks/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MA.com.Artworks;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ma.artworks-demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -862,54 +828,6 @@
 			};
 			name = Release;
 		};
-		54B3712F2771BCA200592E93 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A6B313D58FC544D4C053B42C /* Pods-Artworks-ArtworksUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JSZ9BPQ2F4;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MA.com.ArtworksUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Artworks;
-			};
-			name = Debug;
-		};
-		54B371302771BCA200592E93 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5E01E108294880A6713357F /* Pods-Artworks-ArtworksUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JSZ9BPQ2F4;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = MA.com.ArtworksUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Artworks;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -936,15 +854,6 @@
 			buildConfigurations = (
 				54B3712C2771BCA200592E93 /* Debug */,
 				54B3712D2771BCA200592E93 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		54B3712E2771BCA200592E93 /* Build configuration list for PBXNativeTarget "ArtworksUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				54B3712F2771BCA200592E93 /* Debug */,
-				54B371302771BCA200592E93 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
