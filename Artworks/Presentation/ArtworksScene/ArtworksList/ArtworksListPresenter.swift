@@ -45,7 +45,7 @@ class ArtworksListPresenter: ArtworksListPresenterProtocol {
     
     // MARK: Methods
     func getTitle() -> String{
-        "Artworks" // TODO: Localization
+        "ArtworksListTitle".localizedValue
     }
     
     func getArtworksCount() -> Int {
@@ -100,24 +100,24 @@ class ArtworksListPresenter: ArtworksListPresenterProtocol {
         switch artworksError{
             
         case .noIntenetConnection:
-            self.view?.showAlert(title: "Error",
-                                  message: "Internet connection can not be established",
-                                  actions: [.init(title: "OK",
+            self.view?.showAlert(title: "Error".localizedValue,
+                                 message: "NoInternetConnectErrorMessage".localizedValue,
+                                 actions: [.init(title: "OKAction".localizedValue,
                                                   block: nil,
                                                   type: .normal)])
             
         case .connectionTimeout:
-            self.view?.showAlert(title: "Error",
-                                  message: "Internet connection took too much time",
-                                  actions: [.init(title: "OK",
+            self.view?.showAlert(title: "Error".localizedValue,
+                                 message: "InternetConnectTimeoutErrorMessage".localizedValue,
+                                 actions: [.init(title: "OKAction".localizedValue,
                                                   block: nil,
                                                   type: .normal)])
 
         case .dataTransferError(let dataTransferError):
             errorLog("dataTransferError: \(String(describing: dataTransferError))")
-            self.view?.showAlert(title: "Error",
-                                  message: "Internal error occured, check application logs",
-                                  actions: [.init(title: "OK",
+            self.view?.showAlert(title: "Error".localizedValue,
+                                 message: "InternalErrorMessage".localizedValue,
+                                  actions: [.init(title: "OKAction".localizedValue,
                                                   block: nil,
                                                   type: .normal)])
         }

@@ -66,18 +66,20 @@ class ArtworkDetailsPresenter: ArtworkDetailsPresenterProtocol {
     }
     
     func getTitle() -> String{
-        artwork.title // TODO: Localization
+        artwork.title
     }
     
     func fetchArtistInfo(){
         
         repo?.getArtist(id: artwork.artistId, completion: { [weak self] result in
             
+            guard let `self` = self else { return }
+            
             let outputResult = result
                 .map { ArtistViewModel(artist: $0) }
                 .mapError { $0 as Error }
             
-            self?.view?.artistInfoFetched(with: outputResult)
+            self.view?.artistInfoFetched(with: outputResult)
             
             if case .failure(let error) = result {
                 errorLog("\(String(describing: error))")
@@ -85,31 +87,31 @@ class ArtworkDetailsPresenter: ArtworkDetailsPresenterProtocol {
                 switch error{
                     
                 case .noAttacedIdentifier:
-                    self?.view?.showAlert(title: "Error",
-                                          message: "Artist info is not provided",
+                    self.view?.showAlert(title: "Error",
+                                          message: "NoAttacedIdentifierErrorMessage".localizedValue,
                                           actions: [.init(title: "OK",
                                                           block: nil,
                                                           type: .normal)])
 
                 case .noIntenetConnection:
-                    self?.view?.showAlert(title: "Error",
-                                          message: "Internet connection can not be established",
-                                          actions: [.init(title: "OK",
+                    self.view?.showAlert(title: "Error".localizedValue,
+                                         message: "NoInternetConnectErrorMessage".localizedValue,
+                                         actions: [.init(title: "OKAction".localizedValue,
                                                           block: nil,
                                                           type: .normal)])
-                
+                    
                 case .connectionTimeout:
-                    self?.view?.showAlert(title: "Error",
-                                          message: "Internet connection took too much time",
-                                          actions: [.init(title: "OK",
+                    self.view?.showAlert(title: "Error".localizedValue,
+                                         message: "InternetConnectTimeoutErrorMessage".localizedValue,
+                                         actions: [.init(title: "OKAction".localizedValue,
                                                           block: nil,
                                                           type: .normal)])
 
                 case .dataTransferError(let dataTransferError):
                     errorLog("dataTransferError: \(String(describing: dataTransferError))")
-                    self?.view?.showAlert(title: "Error",
-                                          message: "Internal error occured, check application logs",
-                                          actions: [.init(title: "OK",
+                    self.view?.showAlert(title: "Error".localizedValue,
+                                         message: "InternalErrorMessage".localizedValue,
+                                          actions: [.init(title: "OKAction".localizedValue,
                                                           block: nil,
                                                           type: .normal)])
                 }

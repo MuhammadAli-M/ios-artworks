@@ -19,7 +19,7 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
     
     private lazy var seeMoreBtn: UIButton = {
         let btn = UIButton(type: .system)
-        btn.setTitle("See more", for: .normal)
+        btn.setTitle("SeeMoreBtnTitle".localizedValue, for: .normal)
         btn.addTarget(self, action: #selector(seeMoreBtnTapped), for: .touchUpInside)
         return btn
     }()
@@ -78,7 +78,7 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
         
         addSeeMoreBtnUI()
         
-        artistName.text = "By: " + artistTitle
+        artistName.text = "By: ".localizedValue + artistTitle
         themeUpdated(theme: theme)
     }
     
@@ -101,8 +101,8 @@ extension ArtworkDetailsVC:ArtworkDetailsViewProtocol{
             
             let info =
 """
-Birth: \(model.birthDate),
-Death: \(model.deathDate)
+\("ArtistBirthLabel".localizedValue)\(model.birthDate),
+\("ArtistDeathLabel".localizedValue)\(model.deathDate)
 """
             artistName.text?.append(contentsOf: "\n" + info)
             activityIndicator.stopAnimating()
