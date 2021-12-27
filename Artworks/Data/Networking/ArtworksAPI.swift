@@ -15,11 +15,11 @@ struct ArtworksRequest: Encodable {
 // MARK: - ArtworksListResponse
 class ArtworksListResponse: Codable {
     let pagination: Pagination
-    let data: [Datum]
+    let data: [ArtworkResponse]
     let info: Info
     let config: Config
 
-    init(pagination: Pagination, data: [Datum], info: Info, config: Config) {
+    init(pagination: Pagination, data: [ArtworkResponse], info: Info, config: Config) {
         self.pagination = pagination
         self.data = data
         self.info = info
@@ -59,8 +59,8 @@ class Config: Codable {
     }
 }
 
-// MARK: - Datum
-struct Datum: Codable {
+// MARK: - ArtworkResponse
+struct ArtworkResponse: Codable {
     let id: Int
 //    let apiModel: String
 //    let apiLink: String
@@ -218,102 +218,6 @@ struct Datum: Codable {
 //        case timestamp
 //        case suggestAutocompleteBoosted = "suggest_autocomplete_boosted"
     }
-
-//    init(id: Int, apiModel: APIModel, apiLink: String, isBoosted: Bool, title: String, altTitles: [Any]?, thumbnail: Thumbnail?, mainReferenceNumber: String, hasNotBeenViewedMuch: Bool, boostRank: Any?, dateStart: Int, dateEnd: Int, dateDisplay: String, dateQualifierTitle: DateQualifierTitle, dateQualifierID: Int?, artistDisplay: String, placeOfOrigin: String?, dimensions: String, mediumDisplay: String, inscriptions: String?, creditLine: String, publicationHistory: String?, exhibitionHistory: String?, provenanceText: String?, publishingVerificationLevel: PublishingVerificationLevel, internalDepartmentID: Int, fiscalYear: Int?, fiscalYearDeaccession: Any?, isPublicDomain: Bool, isZoomable: Bool, maxZoomWindowSize: Int, copyrightNotice: Any?, hasMultimediaResources: Bool, hasEducationalResources: Bool, colorfulness: Double?, color: Color?, latitude: Any?, longitude: Any?, latlon: Any?, isOnView: Bool, onLoanDisplay: Any?, galleryTitle: String?, galleryID: Int?, artworkTypeTitle: String, artworkTypeID: Int, departmentTitle: String, departmentID: String, artistID: Int?, artistTitle: String?, altArtistIDS: [Int], artistIDS: [Int], artistTitles: [String], categoryIDS: [String], categoryTitles: [String], artworkCatalogueIDS: [Any], termTitles: [String], styleID: String?, styleTitle: String?, altStyleIDS: [String], styleIDS: [String], styleTitles: [String], classificationID: String, classificationTitle: String, altClassificationIDS: [String], classificationIDS: [String], classificationTitles: [String], subjectID: String?, altSubjectIDS: [String], subjectIDS: [String], subjectTitles: [String], materialID: String?, altMaterialIDS: [String], materialIDS: [String], materialTitles: [String], techniqueID: String?, altTechniqueIDS: [Any], techniqueIDS: [String], techniqueTitles: [String], themeTitles: [String], imageID: String?, altImageIDS: [String], documentIDS: [Any], soundIDS: [Any], videoIDS: [Any], textIDS: [Any], sectionIDS: [Any], sectionTitles: [Any], siteIDS: [Any], suggestAutocompleteAll: [SuggestAutocompleteAll], lastUpdatedSource: Date, lastUpdated: Date, timestamp: Date, suggestAutocompleteBoosted: String?) {
-//        self.id = id
-//        self.apiModel = apiModel
-//        self.apiLink = apiLink
-//        self.isBoosted = isBoosted
-//        self.title = title
-//        self.altTitles = altTitles
-//        self.thumbnail = thumbnail
-//        self.mainReferenceNumber = mainReferenceNumber
-//        self.hasNotBeenViewedMuch = hasNotBeenViewedMuch
-//        self.boostRank = boostRank
-//        self.dateStart = dateStart
-//        self.dateEnd = dateEnd
-//        self.dateDisplay = dateDisplay
-//        self.dateQualifierTitle = dateQualifierTitle
-//        self.dateQualifierID = dateQualifierID
-//        self.artistDisplay = artistDisplay
-//        self.placeOfOrigin = placeOfOrigin
-//        self.dimensions = dimensions
-//        self.mediumDisplay = mediumDisplay
-//        self.inscriptions = inscriptions
-//        self.creditLine = creditLine
-//        self.publicationHistory = publicationHistory
-//        self.exhibitionHistory = exhibitionHistory
-//        self.provenanceText = provenanceText
-//        self.publishingVerificationLevel = publishingVerificationLevel
-//        self.internalDepartmentID = internalDepartmentID
-//        self.fiscalYear = fiscalYear
-//        self.fiscalYearDeaccession = fiscalYearDeaccession
-//        self.isPublicDomain = isPublicDomain
-//        self.isZoomable = isZoomable
-//        self.maxZoomWindowSize = maxZoomWindowSize
-//        self.copyrightNotice = copyrightNotice
-//        self.hasMultimediaResources = hasMultimediaResources
-//        self.hasEducationalResources = hasEducationalResources
-//        self.colorfulness = colorfulness
-//        self.color = color
-//        self.latitude = latitude
-//        self.longitude = longitude
-//        self.latlon = latlon
-//        self.isOnView = isOnView
-//        self.onLoanDisplay = onLoanDisplay
-//        self.galleryTitle = galleryTitle
-//        self.galleryID = galleryID
-//        self.artworkTypeTitle = artworkTypeTitle
-//        self.artworkTypeID = artworkTypeID
-//        self.departmentTitle = departmentTitle
-//        self.departmentID = departmentID
-//        self.artistID = artistID
-//        self.artistTitle = artistTitle
-//        self.altArtistIDS = altArtistIDS
-//        self.artistIDS = artistIDS
-//        self.artistTitles = artistTitles
-//        self.categoryIDS = categoryIDS
-//        self.categoryTitles = categoryTitles
-//        self.artworkCatalogueIDS = artworkCatalogueIDS
-//        self.termTitles = termTitles
-//        self.styleID = styleID
-//        self.styleTitle = styleTitle
-//        self.altStyleIDS = altStyleIDS
-//        self.styleIDS = styleIDS
-//        self.styleTitles = styleTitles
-//        self.classificationID = classificationID
-//        self.classificationTitle = classificationTitle
-//        self.altClassificationIDS = altClassificationIDS
-//        self.classificationIDS = classificationIDS
-//        self.classificationTitles = classificationTitles
-//        self.subjectID = subjectID
-//        self.altSubjectIDS = altSubjectIDS
-//        self.subjectIDS = subjectIDS
-//        self.subjectTitles = subjectTitles
-//        self.materialID = materialID
-//        self.altMaterialIDS = altMaterialIDS
-//        self.materialIDS = materialIDS
-//        self.materialTitles = materialTitles
-//        self.techniqueID = techniqueID
-//        self.altTechniqueIDS = altTechniqueIDS
-//        self.techniqueIDS = techniqueIDS
-//        self.techniqueTitles = techniqueTitles
-//        self.themeTitles = themeTitles
-//        self.imageID = imageID
-//        self.altImageIDS = altImageIDS
-//        self.documentIDS = documentIDS
-//        self.soundIDS = soundIDS
-//        self.videoIDS = videoIDS
-//        self.textIDS = textIDS
-//        self.sectionIDS = sectionIDS
-//        self.sectionTitles = sectionTitles
-//        self.siteIDS = siteIDS
-//        self.suggestAutocompleteAll = suggestAutocompleteAll
-//        self.lastUpdatedSource = lastUpdatedSource
-//        self.lastUpdated = lastUpdated
-//        self.timestamp = timestamp
-//        self.suggestAutocompleteBoosted = suggestAutocompleteBoosted
-//    }
 }
 
 // MARK: - Color

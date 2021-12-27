@@ -9,26 +9,6 @@
 import UIKit
 import SDWebImage
 
-protocol ThemeProtocol{
-    var backgroundColor: UIColor { get }
-    var font: UIFont { get }
-}
-
-struct GoodSightTheme: ThemeProtocol{
-    let backgroundColor: UIColor = .systemGreen
-    let font: UIFont = .systemFont(ofSize: 12)
-}
-
-struct BadSightTheme: ThemeProtocol{
-    let backgroundColor: UIColor = .systemRed
-    let font: UIFont = .systemFont(ofSize: 30)
-}
-
-struct DefaultTheme:ThemeProtocol{
-    let backgroundColor: UIColor = .systemBackground
-    let font: UIFont = .systemFont(ofSize: 16)
-}
-
 class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
     
     // MARK: Outlets
@@ -37,21 +17,21 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
     @IBOutlet weak var artworkTitle: UILabel!
     @IBOutlet weak var artistName: UILabel!
     
-    lazy var seeMoreBtn: UIButton = {
+    private lazy var seeMoreBtn: UIButton = {
         let btn = UIButton(type: .system)
         btn.setTitle("See more", for: .normal)
         btn.addTarget(self, action: #selector(seeMoreBtnTapped), for: .touchUpInside)
         return btn
     }()
     
-    lazy var activityIndicator: UIActivityIndicatorView = {
+    private lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator1 = UIActivityIndicatorView(style: .medium)
         return activityIndicator1
     }()
     
     // MARK: Properties
-    var presenter: ArtworkDetailsPresenterProtocol!
-    let theme: ThemeProtocol = DefaultTheme()
+    private var presenter: ArtworkDetailsPresenterProtocol!
+    private let theme: ThemeProtocol = DefaultTheme()
     
     // MARK: LifeCycle
     class func create(with presenter: ArtworkDetailsPresenterProtocol) -> ArtworkDetailsVC {
@@ -71,7 +51,7 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
     }
     
     // MARK: Actions
-    @objc func seeMoreBtnTapped(){
+    @objc private func seeMoreBtnTapped(){
         debugLog("")
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         artistInfoStackView.addArrangedSubview(activityIndicator)
@@ -82,12 +62,12 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
     }
 
     // MARK: Methods
-    func addSeeMoreBtnUI(){ // Added it from code as a workaround as the sizing from code was not working properly.
+    private func addSeeMoreBtnUI(){ // Added it from code as the storyboard button sizing from code was not working properly.
         seeMoreBtn.translatesAutoresizingMaskIntoConstraints = false
         artistInfoStackView.addArrangedSubview(seeMoreBtn)
     }
     
-    func updateUI(viewModel: ArtworksItemViewModel){
+    private func updateUI(viewModel: ArtworksItemViewModel){
         artworkTitle.text = viewModel.title
         mainImageView.sd_setImage(with: viewModel.imageUrl)
         

@@ -49,7 +49,7 @@ class ArtworkDetailsPresenter: ArtworkDetailsPresenterProtocol {
                     }
                 }
                 
-                // TODO: handle error
+                // TODO: handle deviceRotationManager error
             })
         }
     }

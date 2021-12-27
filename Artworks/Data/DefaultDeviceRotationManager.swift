@@ -9,7 +9,7 @@ import Foundation
 import CoreMotion
 
 class DefaultDeviceRotationManager{
-    let motionManager = CMMotionManager()
+    private let motionManager = CMMotionManager()
 }
 
 extension DefaultDeviceRotationManager: DeviceRotationManagerProtocol{
@@ -37,7 +37,7 @@ extension DefaultDeviceRotationManager: DeviceRotationManagerProtocol{
                 }
                 
                 print("grav x: \(data.gravity.x), y: \(data.gravity.y), z: \(data.gravity.z)")
-                var rotationAroundZ = atan2(data.gravity.x, data.gravity.y) + .pi
+                let rotationAroundZ = atan2(data.gravity.x, data.gravity.y) + .pi
 
                 print("rotationz: \(rotationAroundZ.fromRadToDeg()) •")
                 
@@ -46,11 +46,9 @@ extension DefaultDeviceRotationManager: DeviceRotationManagerProtocol{
 //                if (90-30...90+30 ~= rotationAroundX.fromRadToDeg()) == false{
 //                    rotationAroundZ = 0
 //                }
-                
 //                print("rotationx: \(rotationAroundX.fromRadToDeg()), rotationy: \(rotationAroundY.fromRadToDeg())")
+                
                 handler(.success(rotationAroundZ.fromRadToDeg()))
-                
-                
                 
             }
         }

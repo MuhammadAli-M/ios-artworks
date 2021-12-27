@@ -9,11 +9,11 @@ import UIKit
 
 final class AppDIContainer{
     
-    lazy var appConfiguration = AppConfiguration(apiBaseURL: "https://api.artic.edu/api/v1/",
+    private lazy var appConfiguration = AppConfiguration(apiBaseURL: "https://api.artic.edu/api/v1/",
                                                  imagesBaseURL: "https://www.artic.edu/iiif/2/")
 
     // MARK: - Network
-    lazy var apiDataTransferService: DataTransferService = {
+    private lazy var apiDataTransferService: DataTransferService = {
         let config = ApiDataNetworkConfig(baseURL: URL(string: appConfiguration.apiBaseURL)!,
                                           queryParameters: ["language": NSLocale.preferredLanguages.first ?? "en"])
         

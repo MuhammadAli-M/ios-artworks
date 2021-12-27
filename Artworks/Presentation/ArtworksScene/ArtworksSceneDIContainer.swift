@@ -19,12 +19,12 @@ final class ArtworksSceneDIContainer: ArtworksSceneDIContainerProtocol{
         let imageDataTransferServiceBaseURL: URL?
     }
     
-    let dependecies: Dependencies
-    lazy var artworksRepo = DefaultArtworksRepo(dataTransferService: dependecies.apiDataTransferService,
+    private let dependecies: Dependencies
+    private lazy var artworksRepo = DefaultArtworksRepo(dataTransferService: dependecies.apiDataTransferService,
                                    imageDataTransferServiceBaseURL: dependecies.imageDataTransferServiceBaseURL)
-    lazy var artistsRepo = DefaultArtistsRepo(dataTransferService: dependecies.apiDataTransferService)
+    private lazy var artistsRepo = DefaultArtistsRepo(dataTransferService: dependecies.apiDataTransferService)
     
-    lazy var deviceRotationManager = DefaultDeviceRotationManager() // Added here so you don't make a new one with each presenter
+    private lazy var deviceRotationManager = DefaultDeviceRotationManager() // Added here so you don't make a new one with each presenter
 
     
     init(dependecies: Dependencies){

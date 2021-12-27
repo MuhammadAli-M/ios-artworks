@@ -23,6 +23,7 @@ final class ArtworksSceneFlowCoordinator{
     }
 }
 
+// MARK: - ArtworksListRouterProtocol
 extension ArtworksSceneFlowCoordinator: ArtworksListRouterProtocol{
     func showDetailed(artwork: Artwork) {
         let vc = DIContainer.makeArtworkDetailsVC(artwork: artwork,
@@ -31,6 +32,7 @@ extension ArtworksSceneFlowCoordinator: ArtworksListRouterProtocol{
     }
 }
 
+// MARK: - ArtworkDetailsRouterProtocol
 extension ArtworksSceneFlowCoordinator: ArtworkDetailsRouterProtocol{
     func showArtworksList(){
         navigationController?.popViewController(animated: true)

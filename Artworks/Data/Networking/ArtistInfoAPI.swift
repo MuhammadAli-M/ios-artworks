@@ -29,7 +29,7 @@ struct ArtistInfoResponse: Codable{
     }
 }
 
-// MARK: - DataClass
+// MARK: - ArtistInfo
 struct ArtistInfo: Codable {
     let id: Int
 //    let apiModel: String

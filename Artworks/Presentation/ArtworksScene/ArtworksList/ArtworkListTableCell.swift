@@ -7,9 +7,6 @@
 
 import UIKit
 import SDWebImage
-protocol ArtworkListTableCellDelegate: AnyObject{
-    func cell(urlString: String, updatesFavoriteState isFavorite: Bool)
-}
 
 class ArtworkListTableCell: UITableViewCell {
     
