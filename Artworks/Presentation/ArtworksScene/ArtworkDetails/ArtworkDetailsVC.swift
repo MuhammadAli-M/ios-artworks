@@ -42,7 +42,6 @@ class ArtworkDetailsVC: UIViewController, StoryboardInstantiable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.topItem?.largeTitleDisplayMode = .never
     }
     
     override func viewWillAppear(_ animated: Bool) {
