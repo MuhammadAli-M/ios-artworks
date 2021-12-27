@@ -1,0 +1,29 @@
+/* 
+  Strings.strings
+  Artworks
+
+  Created by Muhammad Adam on 27/12/2021.
+  
+*/
+
+
+// MARK: Artworks
+"ArtworksListTitle" = "Artworks";
+
+
+// MARK: Artwork Details
+"By: " = "By: ";
+"ArtistBirthLabel" = "Birth: ";
+"ArtistDeathLabel" = "Death: ";
+
+"SeeMoreBtnTitle" = "See more";
+
+"NoAttacedIdentifierErrorMessage" = "Artist info is not provided";
+
+// MARK: Common between (Artworks, Artwork Details)
+"Error" = "Error";
+"OKAction" = "OK";
+
+"NoInternetConnectErrorMessage" = "Internet connection can not be established";
+"InternetConnectTimeoutErrorMessage" = "Internet connection took too much time";
+"InternalErrorMessage" = "Internal error occured, check application logs";

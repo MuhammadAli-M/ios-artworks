@@ -19,12 +19,12 @@ final class ArtworksSceneDIContainer: ArtworksSceneDIContainerProtocol{
         let imageDataTransferServiceBaseURL: URL?
     }
     
-    let dependecies: Dependencies
-    lazy var artworksRepo = DefaultArtworksRepo(dataTransferService: dependecies.apiDataTransferService,
+    private let dependecies: Dependencies
+    private lazy var artworksRepo = DefaultArtworksRepo(dataTransferService: dependecies.apiDataTransferService,
                                    imageDataTransferServiceBaseURL: dependecies.imageDataTransferServiceBaseURL)
-    lazy var artistsRepo = DefaultArtistsRepo(dataTransferService: dependecies.apiDataTransferService)
+    private lazy var artistsRepo = DefaultArtistsRepo(dataTransferService: dependecies.apiDataTransferService)
     
-    let deviceRotationManager = DefaultDeviceRotationManager()
+    private lazy var deviceRotationManager = DefaultDeviceRotationManager() // Added here so you don't make a new one with each presenter
 
     
     init(dependecies: Dependencies){
@@ -34,8 +34,8 @@ final class ArtworksSceneDIContainer: ArtworksSceneDIContainerProtocol{
     func makeArtworksListVC(router : ArtworksListRouterProtocol) -> ArtworksListVC{
         let presenter = ArtworksListPresenter()
         presenter.router = router
-        let vc = ArtworksListVC.create(with: presenter)
         presenter.repo = artworksRepo
+        let vc = ArtworksListVC.create(with: presenter)
         presenter.view = vc
         return vc
     }
@@ -46,8 +46,8 @@ final class ArtworksSceneDIContainer: ArtworksSceneDIContainerProtocol{
         presenter.artwork = artwork
         presenter.router = router
         presenter.deviceRotationManager = deviceRotationManager
-        let vc = ArtworkDetailsVC.create(with: presenter)
         presenter.repo = artistsRepo
+        let vc = ArtworkDetailsVC.create(with: presenter)
         presenter.view = vc
         return vc
     }

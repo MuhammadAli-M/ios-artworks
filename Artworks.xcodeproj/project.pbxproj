@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5413F0E72779A7D500150D5F /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0E62779A7D500150D5F /* UIViewController+Alert.swift */; };
+		5413F0E92779A80C00150D5F /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0E82779A80C00150D5F /* AlertAction.swift */; };
+		5413F0EB2779A88F00150D5F /* DefaultArtistsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0EA2779A88F00150D5F /* DefaultArtistsRepo.swift */; };
+		5413F0ED2779A8A700150D5F /* DefaultArtworksRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0EC2779A8A700150D5F /* DefaultArtworksRepo.swift */; };
+		5413F0F32779AA9100150D5F /* ArtworkListTableCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0F22779AA9100150D5F /* ArtworkListTableCellDelegate.swift */; };
+		5413F0F52779B27000150D5F /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0F42779B27000150D5F /* ThemeProtocol.swift */; };
+		5413F0F72779B27D00150D5F /* GoodSightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0F62779B27D00150D5F /* GoodSightTheme.swift */; };
+		5413F0F92779B28500150D5F /* BadSightTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0F82779B28500150D5F /* BadSightTheme.swift */; };
+		5413F0FB2779B28B00150D5F /* DefaultTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0FA2779B28B00150D5F /* DefaultTheme.swift */; };
+		5413F0FE277A434300150D5F /* String+LocalizedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5413F0FD277A434300150D5F /* String+LocalizedValue.swift */; };
+		5413F101277A437700150D5F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5413F103277A437700150D5F /* Localizable.strings */; };
 		54B371022771BCA000592E93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371012771BCA000592E93 /* AppDelegate.swift */; };
 		54B371042771BCA000592E93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B371032771BCA000592E93 /* SceneDelegate.swift */; };
 		54B3710B2771BCA100592E93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B3710A2771BCA100592E93 /* Assets.xcassets */; };
@@ -61,6 +72,8 @@
 		54EC39AC2777640900B30672 /* DeviceRotationManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AA2777640900B30672 /* DeviceRotationManagerProtocol.swift */; };
 		54EC39AE2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */; };
 		54EC39AF2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */; };
+		54EC39B12778240E00B30672 /* Double+Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39B02778240E00B30672 /* Double+Angle.swift */; };
+		54EC39B22778240E00B30672 /* Double+Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54EC39B02778240E00B30672 /* Double+Angle.swift */; };
 		64E567644E4447FB8866378C /* Pods_Artworks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A19A29DCE450D05BBE4F919A /* Pods_Artworks.framework */; };
 		FF93C91B2E5D280BDADDDE9F /* Pods_ArtworksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB50B92DDF0B02730AE58077 /* Pods_ArtworksTests.framework */; };
 /* End PBXBuildFile section */
@@ -77,6 +90,17 @@
 
 /* Begin PBXFileReference section */
 		27852B08FEF7841DFD1E2FA7 /* Pods-ArtworksTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworksTests.release.xcconfig"; path = "Target Support Files/Pods-ArtworksTests/Pods-ArtworksTests.release.xcconfig"; sourceTree = "<group>"; };
+		5413F0E62779A7D500150D5F /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
+		5413F0E82779A80C00150D5F /* AlertAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		5413F0EA2779A88F00150D5F /* DefaultArtistsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultArtistsRepo.swift; sourceTree = "<group>"; };
+		5413F0EC2779A8A700150D5F /* DefaultArtworksRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultArtworksRepo.swift; sourceTree = "<group>"; };
+		5413F0F22779AA9100150D5F /* ArtworkListTableCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtworkListTableCellDelegate.swift; sourceTree = "<group>"; };
+		5413F0F42779B27000150D5F /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		5413F0F62779B27D00150D5F /* GoodSightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodSightTheme.swift; sourceTree = "<group>"; };
+		5413F0F82779B28500150D5F /* BadSightTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadSightTheme.swift; sourceTree = "<group>"; };
+		5413F0FA2779B28B00150D5F /* DefaultTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultTheme.swift; sourceTree = "<group>"; };
+		5413F0FD277A434300150D5F /* String+LocalizedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+LocalizedValue.swift"; sourceTree = "<group>"; };
+		5413F102277A437700150D5F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		54B370FE2771BCA000592E93 /* Artworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B371012771BCA000592E93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B371032771BCA000592E93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +147,7 @@
 		54EC39A727773B9B00B30672 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
 		54EC39AA2777640900B30672 /* DeviceRotationManagerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotationManagerProtocol.swift; sourceTree = "<group>"; };
 		54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDeviceRotationManager.swift; sourceTree = "<group>"; };
+		54EC39B02778240E00B30672 /* Double+Angle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Angle.swift"; sourceTree = "<group>"; };
 		A1384FD64DCBDC7FEF838126 /* Pods-ArtworksTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ArtworksTests.debug.xcconfig"; path = "Target Support Files/Pods-ArtworksTests/Pods-ArtworksTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A19A29DCE450D05BBE4F919A /* Pods_Artworks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artworks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6B313D58FC544D4C053B42C /* Pods-Artworks-ArtworksUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artworks-ArtworksUITests.debug.xcconfig"; path = "Target Support Files/Pods-Artworks-ArtworksUITests/Pods-Artworks-ArtworksUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +178,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5413F0EE2779A8F200150D5F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				54B371502772F80C00592E93 /* Artwork.swift */,
+				54EC399E27771EC400B30672 /* Artist.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		5413F0EF2779A90600150D5F /* Repos Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				54B3716D2773137300592E93 /* ArtworksRepo.swift */,
+				54B371832776144800592E93 /* ArtistsRepo.swift */,
+			);
+			path = "Repos Interfaces";
+			sourceTree = "<group>";
+		};
+		5413F0F02779A94600150D5F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				54B3716B277312E600592E93 /* APIEndpoints.swift */,
+				54B371762773515700592E93 /* ArtworksAPI.swift */,
+				54EC399A2777170D00B30672 /* ArtistInfoAPI.swift */,
+				54B3715427730E4400592E93 /* SENetworking */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5413F0F12779A96100150D5F /* Repos Implementation */ = {
+			isa = PBXGroup;
+			children = (
+				5413F0EA2779A88F00150D5F /* DefaultArtistsRepo.swift */,
+				5413F0EC2779A8A700150D5F /* DefaultArtworksRepo.swift */,
+			);
+			path = "Repos Implementation";
+			sourceTree = "<group>";
+		};
+		5413F0FC2779B2D700150D5F /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				5413F0FA2779B28B00150D5F /* DefaultTheme.swift */,
+				5413F0F62779B27D00150D5F /* GoodSightTheme.swift */,
+				5413F0F82779B28500150D5F /* BadSightTheme.swift */,
+			);
+			path = Themes;
+			sourceTree = "<group>";
+		};
 		54B370F52771BCA000592E93 = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +262,7 @@
 				54B3710A2771BCA100592E93 /* Assets.xcassets */,
 				54B3710C2771BCA100592E93 /* LaunchScreen.storyboard */,
 				54B3710F2771BCA100592E93 /* Info.plist */,
+				5413F103277A437700150D5F /* Localizable.strings */,
 			);
 			path = Artworks;
 			sourceTree = "<group>";
@@ -216,10 +290,11 @@
 			children = (
 				54B371432771D2DF00592E93 /* ArtworksListRouterProtocol.swift */,
 				54B371382771CBC800592E93 /* ArtworksListPresenter.swift */,
-				54B371522772F84900592E93 /* ArtworksItemViewModel.swift */,
 				54B3713C2771CCA500592E93 /* ArtworksListVC.storyboard */,
 				54B371392771CBC800592E93 /* ArtworksListVC.swift */,
 				54B3714627720DD500592E93 /* ArtworkListTableCell.swift */,
+				5413F0F22779AA9100150D5F /* ArtworkListTableCellDelegate.swift */,
+				54B371522772F84900592E93 /* ArtworksItemViewModel.swift */,
 			);
 			path = ArtworksList;
 			sourceTree = "<group>";
@@ -238,8 +313,12 @@
 		54B371482772F74400592E93 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				54B371492772F77800592E93 /* StoryboardInstantiable.swift */,
+				54EC39B02778240E00B30672 /* Double+Angle.swift */,
+				5413F0FD277A434300150D5F /* String+LocalizedValue.swift */,
 				54B3716F277319D400592E93 /* Logger.swift */,
+				5413F0E62779A7D500150D5F /* UIViewController+Alert.swift */,
+				5413F0E82779A80C00150D5F /* AlertAction.swift */,
+				54B371492772F77800592E93 /* StoryboardInstantiable.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -247,12 +326,9 @@
 		54B3714C2772F7AE00592E93 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				54B3716D2773137300592E93 /* ArtworksRepo.swift */,
-				54B371832776144800592E93 /* ArtistsRepo.swift */,
+				5413F0EE2779A8F200150D5F /* Entities */,
+				5413F0EF2779A90600150D5F /* Repos Interfaces */,
 				54EC39AA2777640900B30672 /* DeviceRotationManagerProtocol.swift */,
-				54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */,
-				54B371502772F80C00592E93 /* Artwork.swift */,
-				54EC399E27771EC400B30672 /* Artist.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -260,10 +336,9 @@
 		54B3714D2772F7BB00592E93 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				54B3716B277312E600592E93 /* APIEndpoints.swift */,
-				54B371762773515700592E93 /* ArtworksAPI.swift */,
-				54EC399A2777170D00B30672 /* ArtistInfoAPI.swift */,
-				54B3715427730E4400592E93 /* SENetworking */,
+				5413F0F02779A94600150D5F /* Networking */,
+				5413F0F12779A96100150D5F /* Repos Implementation */,
+				54EC39AD2777643200B30672 /* DefaultDeviceRotationManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -323,6 +398,8 @@
 				54B3717D2773556800592E93 /* ArtworkDetailsVC.storyboard */,
 				54B3717C2773556800592E93 /* ArtworkDetailsVC.swift */,
 				54EC39A727773B9B00B30672 /* ArtistViewModel.swift */,
+				5413F0F42779B27000150D5F /* ThemeProtocol.swift */,
+				5413F0FC2779B2D700150D5F /* Themes */,
 			);
 			path = ArtworkDetails;
 			sourceTree = "<group>";
@@ -437,6 +514,7 @@
 				54B3713D2771CCA500592E93 /* ArtworksListVC.storyboard in Resources */,
 				54B3710E2771BCA100592E93 /* LaunchScreen.storyboard in Resources */,
 				54B3710B2771BCA100592E93 /* Assets.xcassets in Resources */,
+				5413F101277A437700150D5F /* Localizable.strings in Resources */,
 				54B371802773556900592E93 /* ArtworkDetailsVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -522,21 +600,31 @@
 				54B3716027730E4500592E93 /* DataTransferService.swift in Sources */,
 				54B371352771CB3200592E93 /* AppDIContainer.swift in Sources */,
 				54B371372771CB4200592E93 /* AppFlowCoordinator.swift in Sources */,
+				5413F0ED2779A8A700150D5F /* DefaultArtworksRepo.swift in Sources */,
+				5413F0E72779A7D500150D5F /* UIViewController+Alert.swift in Sources */,
+				5413F0F92779B28500150D5F /* BadSightTheme.swift in Sources */,
+				5413F0EB2779A88F00150D5F /* DefaultArtistsRepo.swift in Sources */,
 				54B3716427730E4500592E93 /* NetworkConfigurableMock.swift in Sources */,
 				54EC399F27771EC400B30672 /* Artist.swift in Sources */,
 				54B37170277319D400592E93 /* Logger.swift in Sources */,
 				54B371022771BCA000592E93 /* AppDelegate.swift in Sources */,
 				54B371042771BCA000592E93 /* SceneDelegate.swift in Sources */,
 				54EC39AB2777640900B30672 /* DeviceRotationManagerProtocol.swift in Sources */,
+				5413F0F52779B27000150D5F /* ThemeProtocol.swift in Sources */,
 				54B3716327730E4500592E93 /* NetworkConfig.swift in Sources */,
 				54B371842776144800592E93 /* ArtistsRepo.swift in Sources */,
 				54B371412771D01300592E93 /* ArtworksSceneDIContainer.swift in Sources */,
 				54B3714727720DD500592E93 /* ArtworkListTableCell.swift in Sources */,
 				54B371442771D2DF00592E93 /* ArtworksListRouterProtocol.swift in Sources */,
+				5413F0FE277A434300150D5F /* String+LocalizedValue.swift in Sources */,
 				54B3714A2772F77800592E93 /* StoryboardInstantiable.swift in Sources */,
+				54EC39B12778240E00B30672 /* Double+Angle.swift in Sources */,
+				5413F0FB2779B28B00150D5F /* DefaultTheme.swift in Sources */,
 				54B3717E2773556900592E93 /* ArtworkDetailsPresenter.swift in Sources */,
 				54EC39A827773B9B00B30672 /* ArtistViewModel.swift in Sources */,
 				54EC39AE2777643200B30672 /* DefaultDeviceRotationManager.swift in Sources */,
+				5413F0F32779AA9100150D5F /* ArtworkListTableCellDelegate.swift in Sources */,
+				5413F0E92779A80C00150D5F /* AlertAction.swift in Sources */,
 				54B3716C277312E600592E93 /* APIEndpoints.swift in Sources */,
 				54B3716E2773137300592E93 /* ArtworksRepo.swift in Sources */,
 				54B3717F2773556900592E93 /* ArtworkDetailsVC.swift in Sources */,
@@ -546,6 +634,7 @@
 				54B3716127730E4500592E93 /* NetworkService.swift in Sources */,
 				54B37182277356A700592E93 /* ArtworkDetailsRouterProtocol.swift in Sources */,
 				54B3713A2771CBC800592E93 /* ArtworksListPresenter.swift in Sources */,
+				5413F0F72779B27D00150D5F /* GoodSightTheme.swift in Sources */,
 				54EC399B2777170D00B30672 /* ArtistInfoAPI.swift in Sources */,
 				54B371512772F80C00592E93 /* Artwork.swift in Sources */,
 				54B371532772F84900592E93 /* ArtworksItemViewModel.swift in Sources */,
@@ -565,6 +654,7 @@
 				54EC39A927773B9B00B30672 /* ArtistViewModel.swift in Sources */,
 				54B37174277326DA00592E93 /* Endpoint.swift in Sources */,
 				54B37175277326EE00592E93 /* NetworkConfigurableMock.swift in Sources */,
+				54EC39B22778240E00B30672 /* Double+Angle.swift in Sources */,
 				54EC39A62777288400B30672 /* ArtistInfoAPITests.swift in Sources */,
 				54B37171277326DA00592E93 /* NetworkConfig.swift in Sources */,
 				54EC399C27771E7300B30672 /* ArtistInfoAPI.swift in Sources */,
@@ -590,6 +680,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5413F103277A437700150D5F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5413F102277A437700150D5F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		54B3710C2771BCA100592E93 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

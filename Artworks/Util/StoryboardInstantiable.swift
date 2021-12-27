@@ -2,7 +2,7 @@
 //  StoryboardInstantiable.swift
 //  Artworks
 //
-//  Created by Muhammad Adam on 22/12/2021.
+//  Created by Oleh Kudinov on 01.10.18.
 //
 
 import UIKit

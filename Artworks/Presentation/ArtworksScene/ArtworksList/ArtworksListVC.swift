@@ -71,7 +71,7 @@ extension ArtworksListVC: UITableViewDelegate, UITableViewDataSource{
 }
 
 extension ArtworksListVC: ArtworksListViewProtocol{
-    func didFinishLoading(with error: Error?) { // TODO: Add error handling
+    func didFinishLoading(with error: Error?) {
         artworksTableView.reloadData()
     }
 }

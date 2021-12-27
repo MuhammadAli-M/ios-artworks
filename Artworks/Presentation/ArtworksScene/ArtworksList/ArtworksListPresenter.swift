@@ -11,6 +11,7 @@ import Foundation
 // MARK:- View
 protocol ArtworksListViewProtocol: AnyObject {
     func didFinishLoading(with error: Error?)
+    func showAlert(title: String, message: String, actions: [AlertAction])
 }
 
 // MARK:- ViewPresenter
@@ -33,7 +34,10 @@ class ArtworksListPresenter: ArtworksListPresenterProtocol {
     var artworks = [Artwork]()
     var nextPage = 1
     var loading = false
-    var itemsMarginToFetchNewPage = 10
+    var automaticPaginate = true
+    let minIntervalToFetchAfterNoConnection:Double = 10.0 // seconds
+    let itemsMarginToFetchNewPage = 10
+    
     
     func viewDidLoad() {
         fetchArtworks(page: nextPage)
@@ -41,7 +45,7 @@ class ArtworksListPresenter: ArtworksListPresenterProtocol {
     
     // MARK: Methods
     func getTitle() -> String{
-        "Artworks" // TODO: Localization
+        "ArtworksListTitle".localizedValue
     }
     
     func getArtworksCount() -> Int {
@@ -61,7 +65,17 @@ class ArtworksListPresenter: ArtworksListPresenterProtocol {
                 self.nextPage = page + 1
             case .failure(let error):
                 errorLog("error: \(error.localizedDescription)")
+                
                 self.view?.didFinishLoading(with: error)
+                
+                self.handleError(artworksError: error)
+                
+                if case .noIntenetConnection = error{
+                    DispatchQueue.main.asyncAfter(deadline: .now() + self.minIntervalToFetchAfterNoConnection) { [weak self] in
+                        self?.automaticPaginate = true
+                    }
+                    self.automaticPaginate = false
+                }
             }
             self.loading = false
         })
@@ -77,8 +91,35 @@ class ArtworksListPresenter: ArtworksListPresenterProtocol {
     }
     
     func willDisplayItem(ForIndex index: Int) {
-        if index + itemsMarginToFetchNewPage >= artworks.count && !loading{
+        if index + itemsMarginToFetchNewPage >= artworks.count && !loading && automaticPaginate{
             fetchArtworks(page: nextPage)
+        }
+    }
+    
+    private func handleError(artworksError: ArtworksError){
+        switch artworksError{
+            
+        case .noIntenetConnection:
+            self.view?.showAlert(title: "Error".localizedValue,
+                                 message: "NoInternetConnectErrorMessage".localizedValue,
+                                 actions: [.init(title: "OKAction".localizedValue,
+                                                  block: nil,
+                                                  type: .normal)])
+            
+        case .connectionTimeout:
+            self.view?.showAlert(title: "Error".localizedValue,
+                                 message: "InternetConnectTimeoutErrorMessage".localizedValue,
+                                 actions: [.init(title: "OKAction".localizedValue,
+                                                  block: nil,
+                                                  type: .normal)])
+
+        case .dataTransferError(let dataTransferError):
+            errorLog("dataTransferError: \(String(describing: dataTransferError))")
+            self.view?.showAlert(title: "Error".localizedValue,
+                                 message: "InternalErrorMessage".localizedValue,
+                                  actions: [.init(title: "OKAction".localizedValue,
+                                                  block: nil,
+                                                  type: .normal)])
         }
     }
 }

@@ -1,15 +1,11 @@
 //
-//  ArtworksRepo.swift
+//  DefaultArtworksRepo.swift
 //  Artworks
 //
-//  Created by Muhammad Adam on 22/12/2021.
+//  Created by Muhammad Adam on 27/12/2021.
 //
 
 import Foundation
-
-protocol ArtworksRepo{
-    func getArtworks(page: Int, completion: @escaping (Result<[Artwork], Error>) -> Void)
-}
 
 final class DefaultArtworksRepo {
 
@@ -24,7 +20,7 @@ final class DefaultArtworksRepo {
 
 extension DefaultArtworksRepo: ArtworksRepo {
 
-    func getArtworks(page: Int, completion: @escaping (Result<[Artwork], Error>) -> Void){
+    func getArtworks(page: Int, completion: @escaping (Result<[Artwork], ArtworksError>) -> Void){
 
         let requestDTO = ArtworksRequest(page: page)
 
@@ -40,6 +36,7 @@ extension DefaultArtworksRepo: ArtworksRepo {
                     completion(.success(artworks))
 
                 case .failure(let error):
+                    let error = self.resolve(dataTransferError: error)
                     completion(.failure(error))
                 }
             }
@@ -52,5 +49,18 @@ extension DefaultArtworksRepo: ArtworksRepo {
             artwork1.imageUrl = APIEndpoints.getArtworkImageUrl(with: imageDataTransferServiceBaseURL?.absoluteString ?? "", imageId: artwork.imageId)
             return artwork1
         }
+    }
+    
+    private func resolve(dataTransferError: DataTransferError) -> ArtworksError{
+        var outputError: ArtworksError = .dataTransferError(dataTransferError)
+        
+        if case .networkFailure(let networkError) = dataTransferError{
+           if case .notConnected = networkError {
+            outputError =  ArtworksError.noIntenetConnection
+           } else if case .timedOut = networkError {
+               return ArtworksError.connectionTimeout
+           }
+        }
+        return outputError
     }
 }
