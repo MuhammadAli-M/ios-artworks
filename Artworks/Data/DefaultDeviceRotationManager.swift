@@ -31,12 +31,12 @@ extension DefaultDeviceRotationManager: DeviceRotationManagerProtocol{
             motionManager.startDeviceMotionUpdates(to: queue) { data, error in
                 
                 guard let data = data else {
-                    print("nil")
+                    errorLog("nil")
                     handler(.failure(DeviceRotationManagerError.failedToGetData))
                     return
                 }
                 
-                print("grav x: \(data.gravity.x), y: \(data.gravity.y), z: \(data.gravity.z)")
+//                print("grav x: \(data.gravity.x), y: \(data.gravity.y), z: \(data.gravity.z)")
                 let rotationAroundZ = atan2(data.gravity.x, data.gravity.y) + .pi
 
                 print("rotationz: \(rotationAroundZ.fromRadToDeg()) •")
