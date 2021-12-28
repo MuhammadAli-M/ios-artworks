@@ -7,7 +7,7 @@
 ## Architecture
 
 - MVP 
-- Clean Architecture (check [Known Issues](##Known-Issues)) 
+- Clean Architecture (check [Known Issues](##known-issues)) 
 - Dependency Injection
 
 ## Features 
