@@ -4,6 +4,14 @@
 
 ![Artworks presentation 002](https://user-images.githubusercontent.com/36597057/147503997-4abce218-fb71-4ef3-ab35-1186467dc133.png)
 
+## Overview 
+
+iOS demo app to show artworks. The app views are: 
+1. main screen to show paginated artworks
+2. detail screen to show artwork details. The background of the detail screen is updated based on the iPhone orientaion, this is where core motion comes to the show. 
+
+
+
 ## Architecture
 
 - MVP 
